@@ -53,6 +53,14 @@ DEFINE_FUNCTION(utf8_decode, {
   *c = base;
 });
 
+DEFINE_FUNCTION(htmlentities_encode, {
+  
+})
+
+DEFINE_FUNCTION(htmlentities_decode, {
+
+})
+
 static void utf8_set_bytes(unsigned char *ptr, int utf8_len,
                            unsigned int codepoint) {
 
@@ -249,12 +257,6 @@ static void mem_replace(char **c, size_t offset, size_t len, void *data,
   (*c)[new_len] = 0;
 }
 
-/**
- * string: pointer to the string
- * len: new string length
- * data: data to be appended
- * data_len: size of the data to be appended
- * */
 static void mem_append(char **c, void *data, size_t data_len) {
 
   if (!c)
