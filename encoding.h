@@ -68,6 +68,9 @@
 DECLARE_FUNCTION(utf8_encode);
 DECLARE_FUNCTION(utf8_decode);
 
+DECLARE_FUNCTION(htmlentities_encode);
+DECLARE_FUNCTION(htmlentities_decode);
+
 static void *unicode_to_utf8(unsigned int codepoint, size_t *len);
 static unsigned int utf8_to_unicode(char *c, size_t *advance, char *valid);
 
