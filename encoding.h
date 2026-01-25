@@ -2,8 +2,6 @@
 #define C_ENCODING
 
 #include "cstring.h"
-#include <stdio.h>
-#include <string.h>
 
 #ifdef ENCODING_STANDALONE
 #define DECLARE_FUNCTION(name)                                                 \
