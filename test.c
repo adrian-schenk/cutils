@@ -2,10 +2,17 @@
 #include "cargs.h"
 #define CSTRING_IMPLEMENTATION
 #include "cstring.h"
+#undef CSTRING_IMPLEMENTATION
+#define ENCODING_IMPLEMENTATION
+#include "encoding.h"
+#undef ENCODING_IMPLEMENTATION
 #include "cthread.h"
 #include <pthread.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <assert.h>
+
+#define TEST_PASSED(n) assert(n); printf("\033[1;92mtest passed: " #n "\033[0m\n");
 
 #ifdef TEST_CARGS
 #define ARGS \
@@ -94,7 +101,11 @@ int main(int argc, char** argv) {
   }
   
 #endif // TEST_CTHREAD
-       
+
+#ifdef TEST_CSTRING
+  
+#endif
+
   sleep(1);
 
   return 1;
