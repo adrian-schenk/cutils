@@ -3,7 +3,9 @@
 #define CSTRING_IMPLEMENTATION
 #include "cstring.h"
 #undef CSTRING_IMPLEMENTATION
+#define ENCODING_IMPLEMENTATION
 #include "encoding.h"
+#undef ENCODING_IMPLEMENTATION
 #include "cthread.h"
 #include <pthread.h>
 #include <stdlib.h>
